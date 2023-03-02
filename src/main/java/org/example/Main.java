@@ -1,10 +1,15 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
+    private static int currentNum=1;
+
     public static void main(String[] args) {
+        List<String> sayList = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("== 명언 앱 ==");
         while (true) {
@@ -18,6 +23,8 @@ public class Main {
                 String say = sc.nextLine();
                 System.out.printf("작가 : ");
                 String author = sc.nextLine();
+                System.out.println(currentNum + "번 명언이 등록되었습니다.");
+                currentNum++;
             }
         }
     }
